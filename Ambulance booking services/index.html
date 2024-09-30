@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Ambulance Service</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .service-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            margin: 10px;
+            border-radius: 10px;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+            width: 200px;
+        }
+
+        .service-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Select Ambulance Service</h1>
+    <button class="service-button" onclick="redirectToBooking('Patient Transport')">Patient Transport</button>
+    <button class="service-button" onclick="redirectToBooking('Intensive Care')">Intensive Care</button>
+    <button class="service-button" onclick="redirectToBooking('Emergency')">Emergency</button>
+
+    <script>
+        function redirectToBooking(serviceType) {
+            window.location.href = ambulance-booking.html?service=${serviceType};
+        }
+    </script>
+
+</body>
+</html>

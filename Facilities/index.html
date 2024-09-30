@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Buttons</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .service-button {
+            background-color: #fff;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            padding: 10px;
+            width: 120px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .service-button:hover {
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .service-button img {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 10px;
+        }
+
+        .service-button p {
+            margin-top: 5px;
+            font-size: 14px;
+            color: #333;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="service-button" onclick="openService('doctor-consultant')">
+            <img src="https://via.placeholder.com/80x80?text=Doctor" alt="Doctor Consultant">
+            <p>Doctor Consultant</p>
+        </div>
+
+        <div class="service-button" onclick="openService('appointment')">
+            <img src="https://via.placeholder.com/80x80?text=Appointment" alt="Appointment">
+            <p>Appointment</p>
+        </div>
+
+        <div class="service-button" onclick="openService('ambulance-service')">
+            <img src="https://via.placeholder.com/80x80?text=Ambulance" alt="Ambulance Service">
+            <p>Ambulance Service</p>
+        </div>
+
+        <div class="service-button" onclick="openService('health-insurance')">
+            <img src="https://via.placeholder.com/80x80?text=Insurance" alt="Health Insurance">
+            <p>Health Insurance</p>
+        </div>
+
+        <div class="service-button" onclick="openService('chatbot')">
+            <img src="https://via.placeholder.com/80x80?text=Chatbot" alt="Chatbot">
+            <p>Chatbot</p>
+        </div>
+    </div>
+
+    <script>
+        // Function to handle button click
+        function openService(service) {
+            switch(service) {
+                case 'doctor-consultant':
+                    alert('Opening Doctor Consultant Service...');
+                    // Add your custom logic to navigate or handle action here
+                    break;
+                case 'appointment':
+                    alert('Opening Appointment Service...');
+                    break;
+                case 'ambulance-service':
+                    alert('Opening Ambulance Service...');
+                    break;
+                case 'health-insurance':
+                    alert('Opening Health Insurance Service...');
+                    break;
+                case 'chatbot':
+                    alert('Opening Chatbot Service...');
+                    break;
+                default:
+                    alert('Service not found.');
+            }
+        }
+    </script>
+
+</body>
+</html>

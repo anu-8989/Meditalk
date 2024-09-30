@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ambulance Booking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .booking-container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-type {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .driver-info {
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        .action-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            margin: 10px;
+            border-radius: 10px;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+            width: 200px;
+        }
+
+        .action-button:hover {
+            background-color: #45a049;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="booking-container">
+        <div class="service-type" id="serviceType">Ambulance Service: </div>
+        <div class="driver-info">
+            <p><strong>Driver Name:</strong> John Doe</p>
+            <p><strong>Contact:</strong> +1234567890</p>
+        </div>
+
+        <button class="action-button" onclick="contactDriver()">Contact Driver</button>
+        <button class="action-button" onclick="bookNow()">Book Now</button>
+    </div>
+
+    <script>
+        // Extract the service type from URL parameters
+        window.onload = function() {
+            const params = new URLSearchParams(window.location.search);
+            const serviceType = params.get('service');
+            document.getElementById('serviceType').innerText += serviceType;
+        }
+
+        // Function to "Contact" driver (make a phone call)
+        function contactDriver() {
+            const phoneNumber = '+1234567890';
+            window.location.href = tel:${phoneNumber};
+        }
+
+        // Function for "Book Now"
+        function bookNow() {
+            window.location.href = 'location-page.html';
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Buttons with Modal</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .service-button {
+            background-color: #fff;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            padding: 10px;
+            width: 120px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .service-button:hover {
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .service-button img {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 10px;
+        }
+
+        .service-button p {
+            margin-top: 5px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 300px;
+        }
+
+        .modal-content h3 {
+            margin-bottom: 20px;
+        }
+
+        .modal-content button {
+            margin: 10px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .close-btn {
+            background-color: red;
+            color: white;
+        }
+
+        .video-btn, .message-btn, .audio-btn {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="service-button" onclick="openModal()">
+            <img src="https://via.placeholder.com/80x80?text=Doctor" alt="Doctor Consultant">
+            <p>Doctor Consultant</p>
+        </div>
+    </div>
+
+    <!-- Modal HTML -->
+    <div id="doctorModal" class="modal">
+        <div class="modal-content">
+            <h3>Doctor Consultant</h3>
+            <button class="video-btn" onclick="startVideoChat()">Video Chat</button>
+            <button class="message-btn" onclick="sendMessage()">Message</button>
+            <button class="audio-btn" onclick="startAudioChat()">Audio Chat</button>
+            <br>
+            <button class="close-btn" onclick="closeModal()">Close</button>
+        </div>
+    </div>
+
+    <script>
+        // Open the modal
+        function openModal() {
+            document.getElementById('doctorModal').style.display = 'flex';
+        }
+
+        // Close the modal
+        function closeModal() {
+            document.getElementById('doctorModal').style.display = 'none';
+        }
+
+        // Action for Video Chat
+        function startVideoChat() {
+            alert("Starting Video Chat...");
+            closeModal();
+        }
+
+        // Action for Message
+        function sendMessage() {
+            alert("Opening Message Service...");
+            closeModal();
+        }
+
+        // Action for Audio Chat
+        function startAudioChat() {
+            alert("Starting Audio Chat...");
+            closeModal();
+        }
+    </script>
+
+</body>
+</html>
